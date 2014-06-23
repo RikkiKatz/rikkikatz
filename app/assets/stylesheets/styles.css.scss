@@ -1,13 +1,17 @@
 $navbarBackgroundHighlight: white;
 $navbarBackground: white;
-$btnPrimaryBackground: purple;
+$btnPrimaryBackground: green;
 
 @import 'bootstrap';
 body{
     padding-top: 60px;
+    background: url(bg.jpg);
+    background-size: 100%;
+    background-repeat:no-repeat;
 }
 
 @import 'bootstrap-responsive';
+
 
 .navbar-inner{
     @include box-shadow(none !important);
