@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
 
-		<link rel="shortcut icon" href="/favicon_comp.ico" type="image/x-icon">
-		<link rel="icon" href="/favicon_comp.ico" type="image/x-icon">
+<head>
+  <title>Rikki Katz</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  	<link rel="shortcut icon" href="/favicon_comp.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon_comp.ico" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 
-	  <title>Rikki Katz</title>
-	  <%= stylesheet_link_tag    "application", media: "all" %>
-	  <%= javascript_include_tag "application" %>
-	  <%= csrf_meta_tags %>
-	  
-	</head>
+ <%= render 'layouts/header' %>
+<div class = "container">
+	<% flash.each do |name, msg| %>
+     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	<% end %>
+	<%= yield %>
+</div>
 
-	<body>
-		<%= render 'layouts/header' %>
-		<div class="container">
-    		<%= yield %>
-   	 	<%= render 'layouts/footer' %>
-		</div>
-	</body>
+ <%= render 'layouts/footer' %>
+</body>
 </html>
