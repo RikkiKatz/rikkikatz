@@ -1,16 +1,30 @@
 <div class = "panel panel-default">
 	<div class = "panel-heading">
-		<h1>About My Projects</h1>
+		<h1>My Projects</h1>
 	</div>
 
 	<div class = "panel-body">
 		<ul class="nav nav-pills nav-stacked">
-			<li role="presentation"><a href="#">HFC Meetings</a></li>
-			<li role="presentation"><a href="#">CUNY Research</a></li>
+			<li role="presentation"><a href="http://hfc-meetings.herokuapp.com/">HFC Meetings</a></li>
+
+<% if false %>
+			<p>I conceptualized, designed, and implemented this project for <%= link_to "HappyFunCorp", "http://www.happyfuncorp.com/#home" %> to reserve and track meeting rooms. 
+				Users can create an account and reservations for the company's conference rooms. </p>
+			<p>Source code can be found <%= link_to "here", "https://github.com/RikkiKatz/HFC" %>.
+<% end %>
+
+			<li role="presentation"><a href="https://github.com/kapelner/neurotika">CUNY Research</a></li>
 		</ul>
 	</div>
 
 <% if false %>
+
+rails g scaffold project
+title :string
+description :text
+screenshot :image
+
+
 	<div class = "panel-heading">
 		<h1>About My Travels</h1>
 	</div>
